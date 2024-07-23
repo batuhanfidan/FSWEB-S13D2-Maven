@@ -36,11 +36,11 @@ public class Main {
             }
         }
 
-       if (sum == number) {
-          return true;
-       } else {
-           return false;
-       }
+        if (sum == number) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public static String numberToWords(int number) {
@@ -50,15 +50,15 @@ public class Main {
             return "Invalid Value";
         }
 
-        StringBuilder result = new StringBuilder();
+        String result = "";
         String words = String.valueOf(number);
         char[] numbers = words.toCharArray();
 
         for (int i = 0; i < numbers.length; i++) {
             int digit = numbers[i] - '0';
-            result.append(oneDigit[digit]);
+            result += oneDigit[digit];
             if (i < numbers.length - 1) {
-                result.append(" ");
+                result += " ";
             }
         }
         return result.toString();
